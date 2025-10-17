@@ -1,13 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    MainPage.xaml
+    This is the main UI page of the Location Tracker app.
+    It contains a Map control that displays the user's current location
+    and will be extended to render a heat map of location data.
+-->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
              x:Class="LocationTracker.MainPage">
 
-	<Grid>
-		<maps:Map x:Name="map"
-                  IsShowingUser="True"
-                  MapType="Street" />
-	</Grid>
+    <!-- Grid layout to hold UI elements. Currently, it contains only the map, 
+         but more elements (buttons, labels) can be added in the future -->
+    <Grid>
+        <!-- Map control showing the user's current location -->
+        <maps:Map x:Name="map"
+                  IsShowingUser="True"   <!-- Displays the user's GPS location -->
+            MapType="Street"
+            <!-- Sets the map style to street view -->
+            />
+    </Grid>
 
 </ContentPage>
